@@ -1,0 +1,32 @@
+<!-- registration/register.html -->
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block header %}
+<h1>
+	<center>Sign Up</center>
+</h1>
+{% endblock header%}
+
+{% block content %}
+<section class="container justify-content-center">
+	<p class="alert alert-warning text-center">
+		Fill in the required fields as indicated
+	</p>
+
+	<form id="signupForm" method="post" accept-charset="utf-8" onforminput="checkPasswordMatch()">
+		{% bootstrap_form form layout='floating' %}
+		{% csrf_token %}
+		<div class="form-check m-2">
+			<input class="form-check-input" type="checkbox" value="" id="showPasswordBox"
+				onclick="togglePasswordVisibility('signup',this);">
+			<label class="form-check-label" for="showPassBox">
+				Show Password
+			</label>
+		</div>
+		<button class="btn btn-lg btn-success" type="submit" id="signup-button">Sign Up</button>
+	</form>
+</section>
+{% endblock content%}
