@@ -26,3 +26,4 @@ sqlparse
 tomli
 urllib3
 whitenoise
+psycopg2-binary
