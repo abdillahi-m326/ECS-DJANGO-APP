@@ -140,3 +140,37 @@ cython_debug/
 .vscode
 data.json
 todo
+
+# Terraform working directory
+.terraform/
+
+# Terraform state files (contain sensitive data!)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Override files (local-only configs)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# Lock file (optional – see note below)
+.terraform.lock.hcl
+
+# Plan files
+*.tfplan
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Environment files
+.env
+.env.*
