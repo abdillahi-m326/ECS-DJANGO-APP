@@ -1,7 +1,10 @@
 variable "tags" {
-  description = "Common tags"
+  description = "Global tags for all resources"
   type        = map(string)
-  default     = {}
+  default = {
+    Environment = "Django-ecs-app"
+    Owner       = "Django-app"
+  }
 }
 
 variable "name_prefix" {
